@@ -1,0 +1,9 @@
+C:\Users\Prashant\Documents\Visual Studio 2010\Projects\WebApplication2\WebApplication2\FBSample\bin\WebApplication2.dll
+C:\Users\Prashant\Documents\Visual Studio 2010\Projects\WebApplication2\WebApplication2\FBSample\bin\WebApplication2.pdb
+C:\Users\Prashant\Documents\Visual Studio 2010\Projects\WebApplication2\WebApplication2\FBSample\bin\Facebook.dll
+C:\Users\Prashant\Documents\Visual Studio 2010\Projects\WebApplication2\WebApplication2\FBSample\bin\Facebook.Web.dll
+C:\Users\Prashant\Documents\Visual Studio 2010\Projects\WebApplication2\WebApplication2\FBSample\bin\Facebook.xml
+C:\Users\Prashant\Documents\Visual Studio 2010\Projects\WebApplication2\WebApplication2\FBSample\bin\Facebook.Web.xml
+C:\Users\Prashant\Documents\Visual Studio 2010\Projects\WebApplication2\WebApplication2\FBSample\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Prashant\Documents\Visual Studio 2010\Projects\WebApplication2\WebApplication2\FBSample\obj\Debug\WebApplication2.dll
+C:\Users\Prashant\Documents\Visual Studio 2010\Projects\WebApplication2\WebApplication2\FBSample\obj\Debug\WebApplication2.pdb
