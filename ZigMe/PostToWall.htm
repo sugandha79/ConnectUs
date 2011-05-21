@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Post to wall</title>
+</head>
+<body>
+<div id="fb-root"></div>
+<script type='text/javascript'>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '112850195464492',
+            status: true,
+            cookie: true,
+            xfbml: true
+        });
+                    
+        FB.getLoginStatus(
+            function(response) {
+                if (response.session) {
+                    onRecoSubmit();
+                }
+            }); 
+       }
+
+        // Read a page's GET URL variables and return them as an associative array.
+        function getUrlVars(){
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for(var i = 0; i < hashes.length; i++)
+            {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+
+        // Post a reco to the user's wall
+        function onRecoSubmit() {
+            var urlVars = getUrlVars();
+            var name = urlVars["rn"];
+            var city = urlVars["rc"];
+            var skill = urlVars["rs"];
+            var recoNameStr = 'Recommend ' + name + '!';
+            FB.ui(
+                   {
+                       method: 'feed',
+                       name: recoNameStr,
+                       link: 'http://developers.facebook.com/docs/reference/dialogs/',
+                       picture: 'http://fbrell.com/f8.jpg',
+                       caption: 'Post this Zig to your Facebook wall',
+                       description: 'Give ' + name + ' a stellar recommendation in your own words!',
+                       message: name + ' is such an awesome ' + skill + ' that it makes ' + city + ' a place worth coming home to!',
+                   },
+                   function (response) {
+                       if (response && response.post_id) {
+                           window.location.href='ZigMe.aspx?pw=1';
+                       } else {
+                           window.location.href='ZigMe.aspx?pw=0';
+                       }
+                   }
+                 );
+      }
+   
+    (function () {
+        var e = document.createElement('script');
+        e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+        e.async = true;
+        document.getElementById('fb-root').appendChild(e);
+    } ());
+ </script>
+</body>
+</html>
